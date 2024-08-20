@@ -37,7 +37,7 @@ CREATE TABLE Messages (
     is_edited BOOLEAN DEFAULT FALSE,
     edit_timestamp TIMESTAMP,
     is_disappearing BOOLEAN DEFAULT FALSE,
-    disappear_after INTEGER, -- Time in seconds after which the message should disappear
+    disappear_after INTEGER,
     FOREIGN KEY (chat_id) REFERENCES Chats(chat_id),
     FOREIGN KEY (sender_id) REFERENCES Users(user_id)
 );
